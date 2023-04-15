@@ -12,13 +12,13 @@ while True:
             else:
                 if numberUser == numberRandom: #verifica se o valor é igual ao numero gerado
                     print(f'Parabens, voce acertou na {i+1} tentativa')
-                    pontosUser = max(0, pontos - (4 - i) * 20) #calcula a pontuação do usuario
+                    pontosUser = max(0, pontos - i * 20) #calcula a pontuação do usuario
                     print(f'Sua pontuação final é: {pontosUser} pontos')
                     break #para o laço
                 else:
                     if i == 4:
                         print('Suas tentativas acabaram! O número era', numberRandom) #se as tentativas acabarem, retorna o valor gerado
-                        pontosUser = max(0, pontos - (4 - i) * 20)
+                        pontosUser = max(0, pontos - i * 20)
                         print(f'Sua pontuação final é: {pontosUser} pontos')
                     else:
                         print(f'Tente novamente. Você tem {4-i} tentativas restantes.') #Retorna as tentativas que o usuario possui
